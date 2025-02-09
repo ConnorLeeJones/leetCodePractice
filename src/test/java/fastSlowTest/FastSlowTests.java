@@ -39,4 +39,10 @@ public class FastSlowTests {
         Assert.assertEquals(4, startOfCyclicalList(notCyclical).value);
     }
 
+    @Test
+    public void testHappyNumber(){
+        Assert.assertTrue(happyNumber(23));
+        Assert.assertFalse(happyNumber(12));
+    }
+
 }

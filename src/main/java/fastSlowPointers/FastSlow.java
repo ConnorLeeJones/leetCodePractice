@@ -57,4 +57,24 @@ public class FastSlow {
         return length;
     }
 
+
+    public static boolean happyNumber(int number){
+        int fast = number, slow = number;
+        do {
+            slow = findSquareSum(slow);
+            fast = findSquareSum(findSquareSum(fast));
+        } while (fast != slow);
+        return slow == 1;
+    }
+
+    private static int findSquareSum(int number){
+        int sum = 0;
+        while (number > 0){
+            int digit = number % 10;
+            sum += digit * digit;
+            number /= 10;
+        }
+        return sum;
+    }
+
 }

@@ -18,7 +18,13 @@ public class ReverseLinkedList {
         return previous;
     }
 
-    public static void printLinkedList(ListNode head){
+    public static ListNode reverseLinkedListFromPosition(ListNode head, int p, int q) {
+
+        return head;
+    }
+
+
+        public static void printLinkedList(ListNode head){
         System.out.print("\n");
         while (head != null){
             System.out.print(head.value);
@@ -38,5 +44,14 @@ public class ReverseLinkedList {
         printLinkedList(notCyclical);
         notCyclical = reverseLinkedList(notCyclical);
         printLinkedList(notCyclical);
+
+        //second
+        notCyclical = reverseLinkedList(notCyclical);
+        printLinkedList(notCyclical);
+        notCyclical = reverseLinkedListFromPosition(notCyclical, 2, 4);
+        printLinkedList(notCyclical);
+
+
+
     }
 }
